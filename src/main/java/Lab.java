@@ -1,4 +1,5 @@
 
+
 /**
  * An array is a group of some predefined number of elements.
  * For instance, we could have an array of 10 ints or 10 Strings.
@@ -10,12 +11,14 @@
  * https://www.learnjavaonline.org/en/Arrays
  */
 public class Lab {
+    
+
     /**
      * @param arr the array we're getting data from.
      * @return the length of arr.
      */
-    public int getLengthOfArray(int[] arr){
-        return 0;
+    public int getLengthOfArray(int[] arr) {
+        return arr.length;
     }
 
 
@@ -26,27 +29,53 @@ public class Lab {
      *          Indexes in arrays start counting from zero.
      * @return the element at index n of arr.
      */
-    public int getNthElementOfArray(int[] arr, int n){
-        return 0;
+    
+        
+     public int getNthElementOfArray(int[] arr, int n) {
+        if (n < 0 || n >= arr.length) {
+            throw new IndexOutOfBoundsException("Invalid index.");
+        }
+        return arr[n];
     }
-
+                
+        
+            
+           
+        
+    
+    
+    
     /**
      *
      * @param arr the array we're getting data from.
      * @param n the index (number) of the element we're looking to modify.
      *          Indexes in arrays start counting from zero.
      * @param val the value that we will assign to a spot in the array.
+     * @return 
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
-    public void setNthElementOfArray(int[] arr, int n, int val){
-
+    public int setNthElementOfArray(int[] arr, int n, int val) {
+        if (n < 0 || n >= arr.length) {
+            throw new IndexOutOfBoundsException("Invalid index.");
+        }
+        arr[n] = val;
+        return val;
     }
+    
+    
+        
+     
+     
+    
+    
 
     /**
      * @param n the size of the array we wish to create
-     * @return a new int array that can contain n elements.
+     * @param arr 
      */
-    public int[] returnNewArraySizeN(int n){
-        return null;
+    public int[] returnNewArraySizeN(int n) {
+        int[] newArray = new int[n];
+        // initialize the elements of the new array
+        return newArray;
     }
 }
