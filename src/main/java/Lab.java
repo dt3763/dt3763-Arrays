@@ -55,7 +55,7 @@ public class Lab {
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
     public int setNthElementOfArray(int[] arr, int n, int val) {
-        if (n < 0 || n >= arr.length) {
+        if (n <0 || n >= arr.length) {
             throw new IndexOutOfBoundsException("Invalid index.");
         }
         arr[n] = val;
